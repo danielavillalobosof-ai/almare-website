@@ -1,65 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ALMARE — Menorca Wellness Sanctuary</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-
   <header class="nav">
     <div class="logo">ALMARE</div>
     <nav>
-      <a href="#">Home</a>
-      <a href="#">Concept</a>
-      <a href="#">Experience</a>
-      <a href="#">Contact</a>
+      <a class="active" href="#home">Home</a>
+      <a href="#concept">Concept</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <section class="hero">
-    <div class="overlay">
-      <h1>A Return to Stillness</h1>
-      <p>Boutique Mediterranean wellness sanctuary in Menorca.</p>
-      <button>Discover the Sanctuary</button>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>The Philosophy</h2>
-    <p>
-      Time moves differently under the Mediterranean sun.
-      Almare is designed for conscious travelers seeking restoration,
-      balance, and elevated simplicity.
-    </p>
-  </section>
-
-  <section class="split">
-    <div class="split-image"></div>
-    <div class="split-text">
-      <h2>Elevated Simplicity</h2>
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-inner">
+      <div class="kicker">Menorca Wellness Sanctuary</div>
+      <h1>A return to stillness</h1>
       <p>
-        12 exclusive suites crafted from limestone, raw linen,
-        and reclaimed wood. Private terraces overlooking
-        turquoise coves and the quiet rhythm of Menorca.
+        A boutique Mediterranean retreat shaped by light, sea air, and slow living.
+        Designed for restoration, balance, and elevated simplicity.
       </p>
+      <div class="cta">
+        <a class="btn solid" href="#concept">Discover the concept</a>
+        <a class="btn ghost" href="#contact">Request availability</a>
+      </div>
     </div>
   </section>
 
-  <footer>
-    <div class="footer-content">
-      <div>
-        <h3>ALMARE</h3>
-        <p>Menorca, Balearic Islands</p>
+  <!-- PHILOSOPHY -->
+  <section id="concept" class="section">
+    <div class="container">
+      <div class="eyebrow">The Philosophy</div>
+      <h2>Time moves differently under the Mediterranean sun.</h2>
+      <p class="lead">
+        Almare invites you to pause, breathe, and realign. Our approach blends
+        Menorcan calm, nature-led rituals, and personalized skin & body wellbeing.
+      </p>
+
+      <div class="cards">
+        <div class="card">
+          <div class="card-title">Menorcan Care</div>
+          <p>Local ingredients, sea minerals, warm light, and quiet design.</p>
+        </div>
+        <div class="card">
+          <div class="card-title">Personalized Rituals</div>
+          <p>Skin-first routines, restorative sleep, and gentle movement.</p>
+        </div>
+        <div class="card">
+          <div class="card-title">Elevated Simplicity</div>
+          <p>Natural materials, uncluttered spaces, and slow Mediterranean rhythm.</p>
+        </div>
       </div>
+    </div>
+  </section>
+
+  <!-- SPLIT IMAGE -->
+  <section id="experience" class="split">
+    <div class="split-img" role="img" aria-label="Menorca coast"></div>
+    <div class="split-text">
+      <div class="eyebrow">The Stay</div>
+      <h2>Suites designed for quiet.</h2>
+      <p class="lead">
+        12 intimate suites crafted with limestone, raw linen, and reclaimed wood.
+        Private terraces overlooking turquoise coves—where the sound of the sea
+        becomes your daily rhythm.
+      </p>
+
+      <ul class="bullets">
+        <li>Morning light rituals & coastal walks</li>
+        <li>Signature facials & body recovery treatments</li>
+        <li>Seasonal Mediterranean cuisine</li>
+      </ul>
+
+      <a class="btn solid" href="#contact">Contact & location</a>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section">
+    <div class="container">
+      <div class="eyebrow">Menorca</div>
+      <h2>Salt air. Limestone. Turquoise coves.</h2>
+
+      <div class="gallery">
+        <div class="g g1"></div>
+        <div class="g g2"></div>
+        <div class="g g3"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container contact">
       <div>
-        <p>sanctuary@almare.com</p>
-        <p>+34 971 123 456</p>
+        <div class="eyebrow">Contact</div>
+        <h2>Plan your stay</h2>
+        <p class="lead">
+          Cala Macarella, 07760 — Menorca, Balearic Islands<br/>
+          sanctuary@almare.com · +34 971 123 456
+        </p>
+      </div>
+
+      <form class="form" onsubmit="event.preventDefault(); alert('Message sent (demo)');">
+        <label>
+          Name
+          <input required placeholder="Your name" />
+        </label>
+        <label>
+          Email
+          <input required type="email" placeholder="you@email.com" />
+        </label>
+        <label>
+          Message
+          <textarea required placeholder="Dates, preferences, questions…"></textarea>
+        </label>
+        <button class="btn solid" type="submit">Send</button>
+        <p class="note">Demo form for class (no backend needed).</p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="logo small">ALMARE</div>
+        <div class="fine">© 2026 Almare Menorca. All rights reserved.</div>
+      </div>
+      <div class="fine">
+        <a href="#home">Home</a> · <a href="#concept">Concept</a> · <a href="#experience">Experience</a> · <a href="#contact">Contact</a>
       </div>
     </div>
   </footer>
-
 </body>
 </html>
